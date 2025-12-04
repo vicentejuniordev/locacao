@@ -1,18 +1,11 @@
-## Getting Started
+**Implementação do diagrmaa de caso de uso sobre uma locadora de Automóveis.**
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Objetivos da solução
 
-## Folder Structure
+- Analisar e compreender um estudo de caso.
+- Realizar a modelagem dos dados e informações obtidas.
+- Implementar na linguagem Java o modelo de domínio do problema.
 
-The workspace contains two folders by default, where:
+Digrama de classes do Problema:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+![Class Diagram](./docs/diagram.png)
