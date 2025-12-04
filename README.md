@@ -1,4 +1,4 @@
-**Implementação do diagrmaa de caso de uso sobre uma locadora de Automóveis.**
+**Implementação do diagrma de caso de uso sobre uma locadora de Automóveis.**
 
 Objetivos da solução
 
