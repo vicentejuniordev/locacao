@@ -4,11 +4,13 @@ public class Model {
     String nome;
     String description;
     Brand brand;
+    Category category;
 
-    public Model(String nome, String description, Brand brand){
+    public Model(String nome, String description, Brand brand, Category category){
         this.nome = nome;
         this.description = description;
         this.brand = brand;
+        this.category = category;
     }
 
     public void registerModel(Model m, ArrayList<Model> models){
@@ -27,6 +29,7 @@ public class Model {
                     System.out.println("Modelo: " + m.nome);
                     System.out.println("Descrição: " + m.description);
                     System.out.println("Marca: " + m.brand.name);
+                    System.out.println("Categoria: " + m.category.name);
                 }
             }
         }catch(Exception e){
