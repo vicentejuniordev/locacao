@@ -16,6 +16,27 @@ public class App {
         brand1.registerBrand(brand1, brands);
         Brand.consultBrand("Nissan", brands);
 
+        //Category Class
+        System.out.println("\n--- Category Class Test ---");
+        Category category1 = new Category("SUV", "Veículo utilitário esportivo", 150.0);
+        ArrayList<Category> categories = new ArrayList<>();
+        category1.registerCategory(category1, categories);
+        Category.consultCategory("SUV", categories);
+
+        //Model Class
+        System.out.println("\n--- Model Class Test ---");
+        Model model1 = new Model("Kicks", "SUV compacto da Nissan", brand1, category1);
+        ArrayList<Model> models = new ArrayList<>();
+        model1.registerModel(model1, models);
+        Model.consultModel("Kicks", models);
+        
+        //Automobile Class
+        System.out.println("\n--- Automobile Class Test ---");
+        Automobile automobile1 = new Automobile("ABC1234", "Red", 2020, "Gasoline", 4, 15000.0, 123456789, "XYZ987654321", false, model1);
+        ArrayList<Automobile> automobiles = new ArrayList<>();
+        automobile1.registerAutomobile(automobile1, automobiles);
+        Automobile.consultAutomobile("ABC1234", automobiles);
+
         
     }
 }
