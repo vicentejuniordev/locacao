@@ -13,7 +13,7 @@ public class Model {
         this.category = category;
     }
 
-    public void registerModel(Model m, ArrayList<Model> models){
+    public static void registerModel(Model m, ArrayList<Model> models){
         try{
             models.add(m);
             System.out.println("Modelo registrado com sucesso!!!");

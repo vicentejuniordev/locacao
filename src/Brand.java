@@ -9,7 +9,7 @@ public class Brand {
         this.name = name;
     }
 
-    public void registerBrand(Brand b, ArrayList<Brand> brands){
+    public static void registerBrand(Brand b, ArrayList<Brand> brands){
         try{
             brands.add(b);
             System.out.println("Marca registrada com sucesso!!!");

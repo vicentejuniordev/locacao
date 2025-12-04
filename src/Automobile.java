@@ -11,6 +11,7 @@ public class Automobile {
     String chassis;
     boolean isLocated;
     Model   model;
+    public double totalFuel;
 
     public Automobile(String plate, String color, int year, String typeFuel, int numberDoors, double mileage, int renavam, String chassis, boolean isLocated, Model model){
         this.plate = plate;
@@ -25,7 +26,7 @@ public class Automobile {
         this.model = model;
     }
 
-    public void registerAutomobile(Automobile a, ArrayList<Automobile> automobiles){
+    public static void registerAutomobile(Automobile a, ArrayList<Automobile> automobiles){
         try{
             automobiles.add(a);
             System.out.println("Automóvel registrado com sucesso!!!");

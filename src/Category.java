@@ -11,7 +11,7 @@ public class Category {
         this.dailyRate = dailyRate;
     }
 
-    public void registerCategory(Category cat, ArrayList<Category> categories){
+    public static void registerCategory(Category cat, ArrayList<Category> categories){
         try{
             categories.add(cat);
             System.out.println("Categoria registrada com sucesso!!!");

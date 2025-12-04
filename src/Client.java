@@ -15,7 +15,7 @@ public class Client{
         this.email = email;
     }
 
-    public void registerCliente(Client c, ArrayList<Client> clients){
+    public static void registerCliente(Client c, ArrayList<Client> clients){
         try{
             clients.add(c);
             System.out.println("Cliente registrado com sucesso!!!");
