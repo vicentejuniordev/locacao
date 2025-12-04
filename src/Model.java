@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+
+public class Model {
+    String nome;
+    String description;
+    Brand brand;
+
+    public Model(String nome, String description, Brand brand){
+        this.nome = nome;
+        this.description = description;
+        this.brand = brand;
+    }
+
+    public void registerModel(Model m, ArrayList<Model> models){
+        try{
+            models.add(m);
+            System.out.println("Modelo registrado com sucesso!!!");
+        }catch(Exception e){
+            System.out.println("Erro ao registrar modelo: " + e.getMessage());
+        }
+    }
+
+    public static void consultModel(String nome, ArrayList<Model> models){
+        try{
+            for(Model m : models){
+                if(m.nome.equals(nome)){
+                    System.out.println("Modelo: " + m.nome);
+                    System.out.println("Descrição: " + m.description);
+                    System.out.println("Marca: " + m.brand.name);
+                }
+            }
+        }catch(Exception e){
+            System.out.println("Erro ao buscar modelo: " + e.getMessage());
+        }
+    }
+}

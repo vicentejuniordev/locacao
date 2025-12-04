@@ -25,10 +25,10 @@ public class Client{
 
     }
 
-    public Client consultClient(String cpf, ArrayList<Client> clients){
+    public static Client consultClient(String cpf, ArrayList<Client> clients){
         for(Client c : clients){
             if(c.cpf.equals(cpf)){
-                System.out.println("Cliente encontrado: " + c.namegi);
+                System.out.println("Cliente encontrado: " + c.name);
                 return c;
             }
         }
