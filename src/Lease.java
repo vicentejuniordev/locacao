@@ -1,20 +1,20 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class Location {
+public class Lease {
     Automobile automobile;
     Client client;
-    LocalDateTime dateHourLocation;
+    LocalDateTime dateHourLease;
     LocalDateTime dateHourPrevDelivery;
     LocalDateTime dateHourDelivery = null;
     double totalFuel;
     double totalFuelDelivered;
     double locationValue = 0.0;
 
-    public Location(Automobile automobile, Client client, LocalDateTime dateHourLocation, LocalDateTime dateHourPrevDelivery, LocalDateTime dateHourDelivery, double totalFuel, double totalFuelDelivered, double locationValue){
+    public Lease(Automobile automobile, Client client, LocalDateTime dateHourLease, LocalDateTime dateHourPrevDelivery, LocalDateTime dateHourDelivery, double totalFuel, double totalFuelDelivered, double locationValue){
         this.automobile = automobile;
         this.client = client;
-        this.dateHourLocation = dateHourLocation;
+        this.dateHourLease = dateHourLease;
         this.dateHourPrevDelivery = dateHourPrevDelivery;
         this.dateHourDelivery = dateHourDelivery;
         this.totalFuel = totalFuel;
@@ -23,13 +23,13 @@ public class Location {
     }
 
 
-    public static void registerLocation(Location l, ArrayList<Location> locations){
+    public static void registerLocation(Lease l, ArrayList<Lease> locations){
         try{
-            if(l.automobile.isLocated == true){
+            if(l.automobile.isLeased == true){
                 System.out.println("Erro: Automóvel já está locado.");
                 return;
             }
-            l.automobile.isLocated = true;
+            l.automobile.isLeased = true;
             locations.add(l);
             System.out.println("Locação registrada com sucesso!!!");
         }catch(Exception e){
@@ -37,13 +37,13 @@ public class Location {
         }
     }
 
-    public static void consultLocation(Client client, ArrayList<Location> locations){
+    public static void consultLocation(Client client, ArrayList<Lease> locations){
         try{
-            for(Location loc : locations){
+            for(Lease loc : locations){
                 if(loc.client.cpf.equals(client.cpf)){
                     System.out.println("Cliente: " + loc.client.name);
                     System.out.println("Automóvel: " + loc.automobile.model.nome);
-                    System.out.println("Data e Hora da Locação: " + loc.dateHourLocation);
+                    System.out.println("Data e Hora da Locação: " + loc.dateHourLease);
                     System.out.println("Data e Hora Prevista de Entrega: " + loc.dateHourPrevDelivery);
                     System.out.println("Data e Hora da Entrega: " + loc.dateHourDelivery);
                     System.out.println("Total de Combustível no Momento da Locação: " + loc.totalFuel);
@@ -56,7 +56,7 @@ public class Location {
         }
     }
 
-    public static void calculateLocationValue(Location loc, long daysRented){
+    public static void calculateLocationValue(Lease loc, long daysRented){
         loc.locationValue = daysRented * loc.automobile.model.category.dailyRate;
         if(loc.totalFuelDelivered < loc.totalFuel){
             double fuelDifference = loc.totalFuel - loc.totalFuelDelivered;

@@ -9,11 +9,11 @@ public class Automobile {
     double mileage;
     int renavam;
     String chassis;
-    boolean isLocated;
+    boolean isLeased;
     Model   model;
     public double totalFuel;
 
-    public Automobile(String plate, String color, int year, String typeFuel, int numberDoors, double mileage, int renavam, String chassis, boolean isLocated, Model model){
+    public Automobile(String plate, String color, int year, String typeFuel, int numberDoors, double mileage, int renavam, String chassis, boolean isLeased, Model model){
         this.plate = plate;
         this.color = color;
         this.year = year;
@@ -22,7 +22,7 @@ public class Automobile {
         this.mileage = mileage;
         this.renavam = renavam;
         this.chassis = chassis;
-        this.isLocated = isLocated;
+        this.isLeased = isLeased;
         this.model = model;
     }
 
@@ -47,7 +47,7 @@ public class Automobile {
                     System.out.println("Quilometragem: " + a.mileage);
                     System.out.println("Renavam: " + a.renavam);
                     System.out.println("Chassi: " + a.chassis);
-                    System.out.println("Está locado: " + a.isLocated);
+                    System.out.println("Está locado: " + a.isLeased);
                     System.out.println("Modelo: " + a.model.nome);
                 }
             }

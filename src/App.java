@@ -40,16 +40,16 @@ public class App {
 
         //Location Class
         System.out.println("\n--- Location Class Test ---");
-        Location location1 = new Location(automobile1, client1, LocalDateTime.parse("2024-07-01T10:00:00"), LocalDateTime.parse("2024-07-05T10:00:00"), null, 5.0, 5.0, 0.0);
-        ArrayList<Location> locations = new ArrayList<>();
-        Location.registerLocation(location1, locations);
-        Location.calculateLocationValue(location1, 4);
-        Location.consultLocation(client1, locations);
+        Lease location1 = new Lease(automobile1, client1, LocalDateTime.parse("2024-07-01T10:00:00"), LocalDateTime.parse("2024-07-05T10:00:00"), null, 5.0, 5.0, 0.0);
+        ArrayList<Lease> locations = new ArrayList<>();
+        Lease.registerLocation(location1, locations);
+        Lease.calculateLocationValue(location1, 4);
+        Lease.consultLocation(client1, locations);
 
         //Test try location Automobile already located
         System.out.println("\n--- Test try location Automobile already located ---");
-        Location location2 = new Location(automobile1, client1, LocalDateTime.parse("2024-07-10T10:00:00"), LocalDateTime.parse("2024-07-15T10:00:00"), null, 5.0, 5.0, 0.0);
-        Location.registerLocation(location2, locations);
+        Lease location2 = new Lease(automobile1, client1, LocalDateTime.parse("2024-07-10T10:00:00"), LocalDateTime.parse("2024-07-15T10:00:00"), null, 5.0, 5.0, 0.0);
+        Lease.registerLocation(location2, locations);
 
         
 
